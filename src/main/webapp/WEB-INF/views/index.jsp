@@ -53,14 +53,14 @@
 <!-- Header -->
 <header class="header text-center animate__animated animate__fadeIn">
     <div class="container">
-        <h1 class="animate__animated animate__fadeInDown animate__delay-1s">오늘의 영화 추천</h1>
-        <p class="animate__animated animate__fadeInUp animate__delay-1s">한국 박스오피스 기준 일일 영화 순위와 AI 추천</p>
+        <h1 class="animate__animated animate__fadeInDown">오늘의 영화 추천</h1>
+        <p class="animate__animated animate__fadeInUp">한국 박스오피스 기준 일일 영화 순위와 AI 추천</p>
     </div>
 </header>
 
 <div class="container">
     <!-- 영화 목록 섹션 -->
-    <h2 class="section-title mb-4 animate__animated animate__fadeIn animate__delay-1s">박스오피스 순위</h2>
+    <h2 class="section-title mb-4 animate__animated animate__fadeIn">박스오피스 순위</h2>
     <div class="row">
         <%
             NumberFormat numberFormat = NumberFormat.getNumberInstance(Locale.KOREA);

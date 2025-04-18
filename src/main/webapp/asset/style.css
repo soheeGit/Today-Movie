@@ -1,37 +1,27 @@
-/* 기존 웹폰트 보존 */
 @font-face {
-    font-family: 'MaruBuri';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2) format("woff2"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.ttf) format("truetype");
+    font-family: 'GongGothicMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: 'MaruBuriSemiBold';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.woff2) format("woff2"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.ttf) format("truetype");
+    font-family: '양진체';
+    src: url('https://fastly.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: 'MaruBuriBold';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.woff2) format("woff2"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: 'MaruBuriLight';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.woff2) format("woff2"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: 'MaruBuriExtraLight';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-ExtraLight.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-ExtraLight.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-ExtraLight.woff2) format("woff2"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-ExtraLight.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-ExtraLight.ttf) format("truetype");
+    font-family: 'ChosunGu';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* 커스텀 스타일 */
 body {
-    font-family: 'MaruBuri', serif;
+    font-family: '양진체', serif;
     background-color: #EEEEEE;
     color: #B17F59;
     overflow-x: hidden;
@@ -66,7 +56,7 @@ body {
 }
 
 .movie-title {
-    font-family: 'MaruBuriSemiBold', serif;
+    font-family: 'GongGothicMedium', serif;
     font-size: 1.2rem;
     margin-bottom: 10px;
     display: flex;
@@ -80,14 +70,14 @@ body {
 }
 
 .movie-info {
-    font-family: 'MaruBuriLight', serif;
+    font-family: 'ChosunGu', serif;
     font-size: 0.9rem;
     color: #B17F59;
     margin-bottom: 0.7rem;
 }
 
 .movie-audience {
-    font-family: 'MaruBuriSemiBold', serif;
+    font-family: '양진체', serif;
     color: #B17F59;
     display: flex;
     align-items: baseline;
@@ -128,7 +118,7 @@ body {
 }
 
 .recommendation-title {
-    font-family: 'MaruBuriBold', serif;
+    font-family: '양진체', serif;
     color: #B17F59;
     margin-bottom: 25px;
     border-bottom: 2px solid #B17F59;
@@ -139,7 +129,7 @@ body {
 }
 
 .recommendation-content {
-    font-family: 'MaruBuri', serif;
+    font-family: 'ChosunGu', serif;
     line-height: 1.8;
     white-space: pre-line;
     position: relative;
@@ -149,7 +139,7 @@ body {
 
 /* 헤더 */
 .header {
-    background: linear-gradient(135deg, #1a1e25 0%, #222831 100%);
+    background: linear-gradient(135deg, #102E50 0%, #222831 100%);
     color: #EEEEEE;
     padding: 50px 0;
     margin-bottom: 40px;
@@ -169,20 +159,21 @@ body {
 }
 
 .header h1 {
-    font-family: 'MaruBuriBold', serif;
-    color: #B17F59;
+    font-family: '양진체', serif;
+    color: #E78B48;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     font-size: 2.8rem;
     letter-spacing: 0.5px;
 }
 
 .header p {
-    font-family: 'MaruBuriLight', serif;
+    font-family: 'ChosunGu', serif;
     opacity: 0.9;
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto;
     padding-top: 10px;
+    color: #F5C45E;
 }
 
 /* 배지 스타일 */
@@ -208,22 +199,22 @@ body {
 }
 
 .badge-director {
-    background-color: #B17F59;
+    background-color: #F5C45E;
     opacity: 0.8;
 }
 
 .badge-actor {
-    background-color: #393E46;
+    background-color: #BE3D2A;
     color: #EEEEEE !important;
 }
 
 /* 푸터 */
 footer {
-    background: linear-gradient(135deg, #1a1e25 0%, #222831 100%);
+    background: linear-gradient(135deg, #102E50 0%, #222831 100%);
     color: #EEEEEE;
     padding: 30px 0;
     margin-top: 60px;
-    font-family: 'MaruBuriLight', serif;
+    font-family: '양진체', serif;
     position: relative;
 }
 
@@ -239,10 +230,10 @@ footer::before {
 
 /* 섹션 타이틀 */
 .section-title {
-    color: #222831;
-    font-family: 'MaruBuriBold', serif;
+    color: #102E50;
+    font-family: 'GongGothicMedium', serif;
     margin-bottom: 2rem;
-    border-left: 5px solid #B17F59;
+    border-left: 5px solid #E78B48;
     padding-left: 15px;
     font-size: 1.8rem;
     position: relative;
@@ -255,7 +246,7 @@ footer::before {
     left: 0;
     width: 60px;
     height: 3px;
-    background: #B17F59;
+    background: #F5C45E;
 }
 
 /* 포스터 이미지 관련 스타일 */
@@ -283,7 +274,7 @@ footer::before {
     position: absolute;
     top: 15px;
     left: 15px;
-    background-color: #B17F59;
+    background-color: #E78B48;
     color: white;
     border-radius: 50%;
     width: 40px;
@@ -291,7 +282,7 @@ footer::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'MaruBuriBold', serif;
+    font-family: 'GongGothicMedium', serif;
     font-size: 1.2rem;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
     z-index: 2;
@@ -336,7 +327,7 @@ footer::before {
 }
 
 .movie-audience-count {
-    background: #B17F59;
+    background: #E78B48;
     padding: 3px 8px;
     border-radius: 20px;
     font-family: 'MaruBuriSemiBold', serif;
