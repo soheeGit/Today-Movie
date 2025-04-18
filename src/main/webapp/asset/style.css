@@ -282,7 +282,7 @@ footer::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'GongGothicMedium', serif;
+    font-family: '양진체', serif;
     font-size: 1.2rem;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
     z-index: 2;
@@ -314,7 +314,7 @@ footer::before {
 }
 
 .movie-overlay-title {
-    font-family: 'MaruBuriSemiBold', serif;
+    font-family: '양진체', serif;
     font-size: 1.3rem;
     margin-bottom: 5px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -330,7 +330,7 @@ footer::before {
     background: #E78B48;
     padding: 3px 8px;
     border-radius: 20px;
-    font-family: 'MaruBuriSemiBold', serif;
+    font-family: '양진체', serif;
 }
 
 /* 반응형 디자인 */
