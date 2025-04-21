@@ -61,3 +61,9 @@ NAVER_CLIENT_ID=???
 NAVER_CLIENT_CLEINT=???
 ```
 
+## 실행 예시
+<img width="371" alt="스크린샷 2025-04-21 오후 3 49 00" src="https://github.com/user-attachments/assets/d45490b6-48d1-41cc-8959-72dc72405e04" />
+<img width="346" alt="스크린샷 2025-04-21 오후 3 49 10" src="https://github.com/user-attachments/assets/85bb9a25-ada5-4b98-826f-4690a96e531f" />
+
+
+
