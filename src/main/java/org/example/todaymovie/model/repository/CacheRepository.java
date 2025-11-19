@@ -1,61 +1,34 @@
 package org.example.todaymovie.model.repository;
 
-import com.fasterxml.jackson.core.type.TypeReference;
 import org.example.todaymovie.model.dto.MovieCacheDTO;
+import org.example.todaymovie.model.dto.MovieInfoDTO;
 import org.springframework.stereotype.Repository;
 
-import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Repository
-public class CacheRepository implements APIClientRepository {
-    final String baseURL = dotenv.get("SUPABASE_URL");
-    final String key = dotenv.get("SUPABASE_KEY");
+public class CacheRepository {
+    // 로컬 인메모리 캐시로 변경
+    private final Map<String, MovieCacheDTO> cache = new ConcurrentHashMap<>();
 
-    public void save(MovieCacheDTO movieCacheDTO) throws IOException, InterruptedException {
-        String action = "rest/v1/BOX_OFFICE";
-        String url = "%s/%s".formatted(baseURL, action);
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(url))
-                .POST(HttpRequest.BodyPublishers.ofString(objectMapper.writeValueAsString(movieCacheDTO)))
-                .header("apikey", key)
-                .header("Authorization", "Bearer %s".formatted(key))
-                .header("Content-Type", "application/json")
-                .header("Prefer", "return=minimal")
-                .build();
-        HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-//        System.out.println(response.body());
-        if (response.statusCode() >= 400) {
-            throw new RuntimeException("Failed : HTTP error code : " + response.statusCode());
-        }
+    public void save(MovieCacheDTO movieCacheDTO) {
+        cache.put(movieCacheDTO.boxOfficeDate(), movieCacheDTO);
+        System.out.println("캐시 저장 완료: " + movieCacheDTO.boxOfficeDate());
     }
 
     public MovieCacheDTO getCache(String date) throws Exception {
-        String action = "rest/v1/BOX_OFFICE";
-        String url = "%s/%s?select=*&boxOfficeDate=eq.%s".formatted(baseURL, action, date);
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(url))
-                .header("apikey", key)
-                .header("Authorization", "Bearer %s".formatted(key))
-                .header("Range", "0")
-                .build();
-        HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-//        System.out.println(response.body());
-        if (response.statusCode() == 200) {
-            List<MovieCacheDTO> cacheList = objectMapper.readValue(
-                    response.body(),
-                    new TypeReference<>() {}
-            );
-            MovieCacheDTO cache = cacheList.get(0);
-
-            if (cache.data().isEmpty()) {
-                throw new RuntimeException("캐싱 없음");
-            }
-            return cache;
+        MovieCacheDTO cacheData = cache.get(date);
+        
+        if (cacheData == null) {
+            throw new RuntimeException("캐싱 없음");
         }
-        throw new RuntimeException("Failed : HTTP error code : " + response.statusCode());
+        
+        if (cacheData.data().isEmpty()) {
+            throw new RuntimeException("캐싱 없음");
+        }
+        
+        return cacheData;
     }
 }
